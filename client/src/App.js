@@ -7,12 +7,10 @@ import { ToastContainer } from "react-toastify";
 import { PersistGate } from "redux-persist/integration/react";
 
 function App() {
-  console.log("ilker");
   const theme = createTheme({
     palette: {
       primary: {
         main: grey["900"],
-        
       },
       secondary: {
         main: blueGrey["900"],

@@ -8,7 +8,7 @@ const HOST = process.env?.HOST || "127.0.0.1";
 const PORT = process.env?.PORT || 10000;
 
 const path = require("node:path");
-console.log("ilker");
+
 //!-----------------------------------------------------------------!//
 // asyncErrors to errorHandler:
 require("express-async-errors");
