@@ -4,8 +4,7 @@ const express = require("express");
 const app = express();
 
 require("dotenv").config();
-const HOST = process.env?.HOST || "127.0.0.1";
-const PORT = process.env?.PORT || 10000;
+const PORT = process.env?.PORT || 10000;  
 
 const path = require("node:path");
 
@@ -70,7 +69,9 @@ app.use(require("./src/middlewares/errorHandler"));
 //!-----------------------------------------------------------------!//
 
 // RUN SERVER:
-app.listen(PORT, HOST, () => console.log(`http://${HOST}:${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server running on PORT ${PORT}`)
+})
 
 // Syncronization (must be in commentLine):
 // require('./src/helpers/sync')() // !!! It clear database.
